@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import '../style.css';
 import Swipe from "./swipe";
 import Swipemd from './swipemd';
 import Swipesm from './swipesm';
@@ -12,6 +13,7 @@ class Slider extends Component {
   render() {
     return (
       <div>
+        <h3 className='welcome-head text-center'>Welcome to our Bank</h3>
         <section className='d-lg-block d-none p-4 m-3 card bg-transparent'>
           <Swipe />
         </section>
