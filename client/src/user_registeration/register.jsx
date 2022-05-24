@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './register.css'
+import pic11 from './registeration.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Axios from 'axios';
 import {pic1} from '../carousel/digital.jpg'
@@ -31,10 +32,13 @@ export default class Register extends Component {
         return (
             <div class="container_fluid bg-primary form">
             <div class="row border-dark">
-                <div class="col-12">
-               <form>
-                <div class="form_row">
                 <h3 class="user">User Registeration Form</h3>
+                <div class=" col-sm-12 col-md-5 col-lg-4">
+                <img class="register_img" src="https://static.vecteezy.com/system/resources/previews/001/991/652/large_2x/sign-in-page-flat-design-concept-illustration-icon-account-login-user-login-abstract-metaphor-can-use-for-landing-page-mobile-app-ui-posters-banners-free-vector.jpg" width={450} height450 />
+                </div>
+                <div className='col-sm-12 col-md-7 col-lg-8'>
+                <form class="register_form">
+                {/* <div class="form_row"> */}
                 <label class="register" for="acc_no">Account Number:</label><br/>
                 <input class="acc" type="text" id="acc_no" name="acc_no"/><br/>
                 <label class="register" for="ifsc_code">IFSC code:</label><br/>
@@ -51,11 +55,10 @@ export default class Register extends Component {
                 <input  class="acc" type="password" id="password" name="password"/><br/>
                 <div className='text-center mb-2 mt-3'>
                     <button className='btn btn-primary' type='submit' onClick={this.onsubmit}>Submit</button>
-                    </div>
-                    </div>
+                </div> {/* </div> */}
                </form>
                </div>
-               </div>
+            </div>
             </div>
         );
     }
